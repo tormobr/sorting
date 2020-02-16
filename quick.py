@@ -18,7 +18,6 @@ class Quick:
     def quicksort(self, left, right):
         l, r = left, right
         pivot = self.arr[(r+l)//2]
-        print(self.arr)
         while l <= r:
             while self.arr[l] < pivot:
                 l += 1
@@ -41,11 +40,9 @@ class Quick:
 
 if __name__ == "__main__":
     q = Quick(100)
-    print(q)
     s = time.time()
     q.sort()
     print(f"Runtime: {time.time()-s}")
-    print(q)
     print(f"is_sorted = {sl.check(q.arr, q.n)}")
     sl.animate(q.arr, q.arrays)
 
