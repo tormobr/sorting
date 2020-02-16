@@ -29,13 +29,14 @@ def ani_iteration(i, rects, data):
 
 def animate(arr, data, filename):
     fig = plt.figure()
-    data = data[::10]
+    data = data[::4]
     x = arr
     plt.style.use("dark_background")
     rects = plt.bar(x, data[0], color="w", edgecolor="g")
     plt.ylim(0, max(arr)+10)
 
-    anim = animation.FuncAnimation(fig, ani_iteration, fargs=(rects, data), frames=len(data), interval=1)
-    plt.show()
+    anim = animation.FuncAnimation(fig, ani_iteration, fargs=(rects, data), frames=len(data), interval=10)
+    #plt.show()
     anim.save(filename)
+    print(filename + " saved")
 

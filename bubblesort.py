@@ -17,7 +17,7 @@ class Bubble:
             for j in range(self.n - 1):
                 if self.arr[j] > self.arr[j+1]:
                     sl.swap(self.arr, j, j+1)
-                self.arrays.append(deepcopy(self.arr))
+                    self.arrays.append(self.arr.copy())
 
 
 if __name__ == "__main__":

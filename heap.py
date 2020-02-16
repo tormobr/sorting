@@ -40,5 +40,5 @@ if __name__ == "__main__":
     h.sort()
     print(f"Runtime: {time.time()-s}")
     print(f"is_sorted = {sl.check(h.arr, h.n)}")
-    sl.animate(h.arr, h.arrays, "heap.mp4")
+    sl.animate(h.arr, h.arrays, "heap.mp4");
 
