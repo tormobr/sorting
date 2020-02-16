@@ -14,22 +14,12 @@ class Heap:
         return sl.print_arr(self.arr)
     
     def sort(self):
-        print("before: ", self.arr)
         for i in range((self.n // 2)-1, -1, -1):
             self.heapify(self.n, i);
         for i in range(self.n -1, -1, -1):
             sl.swap(self.arr, 0, i);
             self.arrays.append(self.arr.copy())
             self.heapify(i, 0);
-            print("after: ", self.arr)
-
-        """
-        new = self.arr.copy()
-        for i in range(self.n):
-            heapq.heapify(new)
-            self.arr[i] = heapq.heappop(new)
-            self.arrays.append(self.arr.copy())
-        """  
 
     def heapify(self, n, i):
         maxx = i
@@ -50,5 +40,5 @@ if __name__ == "__main__":
     h.sort()
     print(f"Runtime: {time.time()-s}")
     print(f"is_sorted = {sl.check(h.arr, h.n)}")
-    sl.animate(h.arr, h.arrays)
+    sl.animate(h.arr, h.arrays, "heap.mp4")
 

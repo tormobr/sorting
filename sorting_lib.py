@@ -27,9 +27,9 @@ def ani_iteration(i, rects, data):
         rect.set_height(height)
     return rects
 
-def animate(arr, data):
+def animate(arr, data, filename):
     fig = plt.figure()
-
+    data = data[::10]
     x = arr
     plt.style.use("dark_background")
     rects = plt.bar(x, data[0], color="w", edgecolor="g")
@@ -37,5 +37,5 @@ def animate(arr, data):
 
     anim = animation.FuncAnimation(fig, ani_iteration, fargs=(rects, data), frames=len(data), interval=1)
     plt.show()
-    #anim.save("plot.mp4")
+    anim.save(filename)
 

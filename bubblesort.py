@@ -28,5 +28,5 @@ if __name__ == "__main__":
     print(f"Runtime: {time.time()-s}")
     print(b)
     print(f"is_sorted = {sl.check(b.arr, b.n)}")
-    sl.animate(b.arr, b.arrays)
+    sl.animate(b.arr, b.arrays, "bubble.mp4")
 

@@ -44,5 +44,5 @@ if __name__ == "__main__":
     q.sort()
     print(f"Runtime: {time.time()-s}")
     print(f"is_sorted = {sl.check(q.arr, q.n)}")
-    sl.animate(q.arr, q.arrays)
+    sl.animate(q.arr, q.arrays, "quick.mp4")
 

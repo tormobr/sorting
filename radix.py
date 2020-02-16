@@ -38,5 +38,5 @@ if __name__ == "__main__":
     r.sort()
     print(f"Runtime: {time.time()-s}")
     print(f"is_sorted = {sl.check(r.arr, r.n)}")
-    sl.animate(r.arr, r.arrays)
+    sl.animate(r.arr, r.arrays, "radix.mp4")
 
