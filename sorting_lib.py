@@ -24,10 +24,6 @@ def check(arr, n):
 
 def ani_iteration(i, rects, data):
     for rect, height in zip(rects, data[i]):
-        if check(data[i], len(data[i])):
-            rect.set_color("lightgreen")
-        else:
-            rect.set_color("white")
         rect.set_height(height)
     return rects
 
@@ -36,7 +32,7 @@ def animate(arr, data):
 
     x = arr
     plt.style.use("dark_background")
-    rects = plt.bar(x, data[0], color="w")
+    rects = plt.bar(x, data[0], color="w", edgecolor="g")
     plt.ylim(0, max(arr)+10)
 
     anim = animation.FuncAnimation(fig, ani_iteration, fargs=(rects, data), frames=len(data), interval=1)
